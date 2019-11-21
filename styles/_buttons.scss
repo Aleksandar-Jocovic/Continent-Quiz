@@ -1,0 +1,51 @@
+    @mixin bigBtn () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    width: 200px;
+    height: 50px;
+    margin-top: 15px;
+    background:rgba(226, 226, 226, 0.1);
+	border: 2px solid rgba(226, 226, 226, 0.3);
+	color: rgba(226,226,226, 0.7); 
+	transition: 0.3s ease;
+    border-radius: $radius;
+    outline: none;
+    text-align: center;
+ 
+
+}
+
+ @mixin smallBtn () { 
+    display: flex;
+    font-family: $font;
+    font-weight: bold;;
+    font-size: 17px;
+    width: 70px;
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 0;
+    background: rgb(16, 126, 49);
+	border: 2px solid rgba(226, 226, 226, 0.3);
+	color: rgba(226, 226, 226, 0.918); 
+	transition: 0.3s ease;
+
+
+    //oBICANCSS U SAASSSSSASAASAASSASDA
+
+}
+
+@mixin center () {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+

@@ -1,0 +1,24 @@
+
+#cubeCircle {
+width: 100px;
+height: 100px;
+background: rgb(9, 189, 129);
+margin: 20px 10px 20px 10px;
+ }
+
+#restartBtn {
+     @include bigBtn ();
+     background: rgb(19, 84, 235);
+    // width: 200px;
+    // height: 100px;
+}
+
+#centerResult {
+    @include center ();
+}
+
+#yourScore {
+    font-size: 19px;
+    font-weight: bold;
+    color: $greyText;
+}

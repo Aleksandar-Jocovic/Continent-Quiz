@@ -1,0 +1,53 @@
+.playBtn {
+  @include smallBtn ();
+    display: inline;
+      margin: 30% 0 5% 10%;
+
+}
+
+ul {
+      list-style-type: none;
+      font-size: 10px;
+       color: $homePoint;         
+}
+
+
+
+// id to hide scores when none
+ #homePtsContainer {
+    margin-left: 10%; 
+.scoreDisNone {
+    height: 0; width: 0; overflow: hidden;
+
+} 
+  
+.scoreIndex {
+    border:  $borders; 
+    border-radius: $radius;
+    color: $nextBtn;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1px 5px 0 0;
+    max-width: 25px ;
+}
+.scoreRow {
+    display: flex;
+    margin-top: 10px;
+    
+    #date{
+        font-size: 12px;
+        margin-top: 9px;
+    }
+    .scorePoints {
+        font-size: 20px;
+    }  
+}
+}
+.clearBtn {
+      @include smallBtn ();
+      float: right;
+      margin: 30% 10% 5% 0;
+      font-size: 15px;
+    //display: inline;
+}
