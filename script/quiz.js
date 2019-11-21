@@ -8,7 +8,6 @@ let possibleAns = [
   "Antarctica"
 ];
 
-
 let jsonQuestions = [
   { image: "https://i.imgur.com/upu7gMJ.jpg", continent: "Antarctica" },
   { image: "https://i.imgur.com/E7n3P77.jpg", continent: "Antarctica" },
@@ -67,7 +66,7 @@ var data = localStorage.getItem("continentQuiz")
         { sc: "0", dt: ". . ." }
       ]
     };
-
+// get date store it in today var   
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, "0");
 var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
@@ -179,20 +178,6 @@ const rendQuestion = () => {
 };
 //end of rend fun
 //////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ///////////////// user part
 
