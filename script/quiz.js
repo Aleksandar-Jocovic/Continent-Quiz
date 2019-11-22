@@ -174,26 +174,16 @@ const rendQuestion = () => {
   }
   // incerments counter
   counter++;
-  btnVisible();
 };
 //end of rend fun
 //////////////////////////////////
 
 ///////////////// user part
-
+//display scores on finish page of the game
 function finishPageScr() {
   let _userScore = document.getElementById("finalScore");
   _userScore.innerHTML = `${userScore} pts`;
 }
-
-const btnVisible = () => {
-  let noneTwo = document.getElementById("0");
-  let noneOne = document.getElementById("1");
-  let noneThree = document.getElementById("2");
-  noneTwo.classList.remove("greenGl", "redGl");
-  noneOne.classList.remove("greenGl", "redGl");
-  noneThree.classList.remove("greenGl", "redGl");
-};
 
 //moving pages on buttons
 const questionPage = document.getElementById("questionPage");
@@ -219,14 +209,8 @@ const finishToPlayP = () => {
   homePage.classList.remove("invisible");
   dateScore();
   ranF();
-  /*mislim da ne treba gamesCount++;
- console.log(gamesCount) */
 };
 
-/* const onNextScoresVisible = () => {
-  scrDis = document.getElementById("homePtsContainer");
-  scrDis.classList.remove("scoreDisNone");
-}; */
 // fun to display score and date
 function dateScore() {
   let obj = {
