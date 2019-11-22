@@ -100,12 +100,12 @@ const rendQuestion = () => {
   if (counter > 4) {
     nextToResultP();
   }
-
   var trueAnsw = questions[fiveIndex[counter][0]].continent;
-
   // get img
   var questionImg = questions[fiveIndex[counter][0]].image;
+  
   document.getElementById("img").src = questionImg;
+
   let possibleAns = [
     "Africa",
     "Asia",
@@ -156,8 +156,6 @@ const rendQuestion = () => {
   let btnArr = document.getElementsByClassName("answerBtn");
   for (let i = 0; i < btnArr.length; i++) {
     btnArr[i].addEventListener("click", function() {
-      console.log(choice.innerText);
-      console.log(trueAnsw);
 
       if (choice.innerText === trueAnsw) {
         userScore += 750;
@@ -174,9 +172,15 @@ const rendQuestion = () => {
   }
   // incerments counter
   counter++;
+  removeGlow();
 };
 //end of rend fun
 //////////////////////////////////
+function removeGlow() {
+  document.getElementById('0').classList.remove('greenGl','redGl')
+  document.getElementById('1').classList.remove('greenGl','redGl')
+  document.getElementById("2").classList.remove("greenGl", "redGl")
+}
 
 ///////////////// user part
 //display scores on finish page of the game
@@ -237,21 +241,18 @@ function dateScore() {
   document.getElementById("dateThree").innerText = data.objArr[2].dt;
 
   localStorage.setItem("continentQuiz", JSON.stringify(data));
-  console.log(data.objArr);
 }
 
 //  buton to clear scores
 const clearScores = () => {
   localStorage.clear();
   data.objArr.length = 0;
-  console.log(data.objArr);
 
   data.objArr.unshift(
     { sc: "0", dt: ". . ." },
     { sc: "0", dt: ". . ." },
     { sc: "0", dt: ". . ." }
   );
-  console.log(data.objArr);
 
   document.getElementById("scoreOne").innerText = 0 + " pts";
   document.getElementById("dateOne").innerText = ". . .";
@@ -263,4 +264,4 @@ const clearScores = () => {
   document.getElementById("dateThree").innerText = ". . .";
 };
 
-/// json get
+// to do get question ajax request
