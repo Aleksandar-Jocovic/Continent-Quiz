@@ -1,24 +1,19 @@
 .playBtn {
   @include smallBtn ();
-    display: inline;
-      margin: 30% 0 5% 10%;
-
+   display: inline;
+   margin: 30% 0 5% 10%;
 }
 
 ul {
-      list-style-type: none;
-      font-size: 10px;
-       color: $homePoint;         
+  list-style-type: none;
+  font-size: 10px;
+  color: $homePoint;         
 }
 
-
-
-// id to hide scores when none
  #homePtsContainer {
     margin-left: 10%; 
 .scoreDisNone {
     height: 0; width: 0; overflow: hidden;
-
 } 
   
 .scoreIndex {
@@ -49,5 +44,4 @@ ul {
       float: right;
       margin: 30% 10% 5% 0;
       font-size: 15px;
-    //display: inline;
 }
